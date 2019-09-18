@@ -1,9 +1,27 @@
 <html>
 	<head>
-		
+    	<link rel="stylesheet" href="style.css">
 	</head>
 	<body>
-		
+		<h1>Todo List</h1>
+
+		<div class="container">
+			<div class="projectContainer">
+				<p class="headline">Projects</p>
+				<button id="addProject">Add New Project</button>
+				<div id="projectModal" style="display: none">
+					<form id="projectForm" method="post">
+						<div id="projectTitle"><p>Project Title:</p><input type="text" name="projectTitle"></div>
+						<div id="projectsubmit"><input type="submit" name="projectSubmit" value="Submit"></div>
+					</form>
+				</div>
+				<div id="projectContent"></div>
+			</div>
+			<div class="todoContainer">
+				<p class="headline">Todos</p>
+				<button id="addTodo">Add New Todo</button>
+			</div>
+		</div>
 		<script src="main.js"></script>
 	</body>
 </html>
