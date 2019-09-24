@@ -69,15 +69,75 @@ h1 {
   	transform: scaleX(1);
 }
 
-/*#projectModal {
+/*#projectForm {
+	display: grid;
 }*/
 
+#projectModal {
+	position: fixed; /* Stay in place */
+	z-index: 1; /* Sit on top */
+	padding-top: 100px; /* Location of the box */
+	left: 0;
+	top: 0;
+	width: 100%; /* Full width */
+	height: 100%; /* Full height */
+	overflow: auto; /* Enable scroll if needed */
+}
+
+#projectForm {
+	position: relative;
+  	background-color: #fefefe;
+  	margin: auto;
+  	padding: 20px;
+  	border: 1px solid #efefef;
+  	border-radius: 25px;
+  	width: 25%;
+  	box-shadow: 2px 6px 25px rgba(0, 0, 0, 0.1);
+  	display: grid;
+  	grid-template-columns: 1fr;
+  	grid-template-rows: 1fr 2fr 1fr;
+  	animation-name: animatetop;
+  	animation-duration: 0.4s
+}
+
+#projectsubmit {
+	justify-self: end;
+	width: 100%;
+}
+
+#projectsubmit > input {
+	border-radius: 25px;
+	color: #444444;
+	background: #6c9387;
+	padding: 10px;
+	width: 30%;
+}
+
+@keyframes animatetop {
+  from {top: -300px; opacity: 0}
+  to {top: 0; opacity: 1}
+}
+
+.projectClose {
+  	color: #6c9387;
+  	float: right;
+  	font-size: 28px;
+  	font-weight: bold;
+  	justify-self: end;
+}
+
+.projectClose:hover,
+.projectClose:focus {
+  	color: #5d8c9e;
+  	text-decoration: none;
+  	cursor: pointer;
+}
+
+
 #projectContent {
-	/*display: grid;*/
 	margin-top: 20px;
 	width: 100%;
 	height: 100%;
-	/*border: 1px solid green;*/
 }
 
 .projectDiv {
@@ -85,10 +145,77 @@ h1 {
 	padding: 20px;
 	color: #444444;
 	font-size: 1.4em;
+	border-radius: 25px;
+	margin-bottom: 10px;
+	display: grid;
+	grid-template-columns: 2fr 1fr;
 }
 
 .projectDiv:hover {
 	color: #6c9387;
-	box-shadow: 2px 6px 30px rgba(0, 0, 0, 0.04);	
-	border-radius: 2.5px;
+	box-shadow: 2px 6px 30px rgba(0, 0, 0, 0.06);	
+	border-radius: 25px;
+	transition: all 0.3s ease;
 }
+
+#todoForm {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.selectedProject {
+	background: #BFA8B1;
+}
+
+#todoContent {
+	margin-top: 20px;
+	width: 100%;
+	height: 100%;
+}
+
+.todoDiv {
+	display: grid;
+	grid-template-columns: 1fr 2fr 1fr 1fr 1fr;
+	grid-auto-rows: auto 30px;
+	font-size: 1.3em;
+	padding: 20px;
+	border-radius: 25px;
+	margin-bottom: 10px;
+	border-bottom: 1px groove #efefef;
+	color: #444444;
+}
+
+.todoDiv:hover {
+	color: #6c9387;
+	box-shadow: 2px 6px 30px rgba(0, 0, 0, 0.08);	
+	border-radius: 25px;
+	transition: all 0.3s ease;
+}
+
+.todoPriority {
+	width: 40%;
+	height: 40%;
+	align-self: center;
+	border-radius: 25px;
+	justify-self: end;
+	color: #444444;
+}
+
+.todoPriority:hover {
+	color: #6c9387;
+	box-shadow: 2px 6px 30px rgba(0, 0, 0, 0.08);	
+	border-radius: 25px;
+	transition: all 0.3s ease;
+}
+
+.todoPriorityUrgent {
+	background: #FF4600;
+	color: black;
+}
+
+.icon-trash {
+	justify-self: end;
+	align-self: center;
+	font-size: 30px;
+}
+
