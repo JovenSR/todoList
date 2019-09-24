@@ -1,6 +1,7 @@
 <html>
 	<head>
     	<link rel="stylesheet" href="style.css">
+    	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/3.2.1/css/font-awesome.min.css">
 	</head>
 	<body>
 		<h1>Todo List</h1>
@@ -11,6 +12,7 @@
 				<button id="addProject">Add New Project</button>
 				<div id="projectModal" style="display: none">
 					<form id="projectForm" method="post">
+    					<span class="projectClose">&times;</span>
 						<div id="projectTitle"><p>Project Title:</p><input type="text" name="projectTitle"></div>
 						<div id="projectsubmit"><input type="submit" name="projectSubmit" value="Submit"></div>
 					</form>
@@ -20,6 +22,23 @@
 			<div class="todoContainer">
 				<p class="headline">Todos</p>
 				<button id="addTodo">Add New Todo</button>
+				<div id="todoModal" style="display: none">
+					<form id="todoForm" method="post">
+						<div id="todoTitle"><p>Todo Title:</p><input type="text" name="todoTitle"></div>
+						<div id="todoDescription"><p>Description:</p><input type="text" name="todoDescription"></div>
+						<div id="todoDueDate"><p>Due Date:</p><input type="date" name="dueDate"></div>
+						<div id="todoPriority">
+							<p>Priority:</p>
+							<input type="radio" id="todoRegular" name="todoPriority" value="regular">
+							<label for="todoRegular">Regular</label>
+							<input type="radio" id="todoUrgent" name="todoPriority" value="urgent">
+							<label for="todoUrgent">Urgent</label>
+						</div>
+						<div id="todoSubmit"><input type="submit" name="todoSubmit" value="Submit"></div>
+					</form>	
+				</div>
+				
+				<div id="todoContent"></div>
 			</div>
 		</div>
 		<script src="main.js"></script>

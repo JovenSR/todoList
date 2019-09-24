@@ -1,7 +1,8 @@
 import Project from './project'
-import domMethods from './domMethods'
+import Todo from './todo'
+import projectDom from './projectDom'
+import todoDom from './todoDom'
 
-const defaultProject = Project('Default');
 
 
 

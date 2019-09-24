@@ -1,10 +1,12 @@
 const Project = (title) => {
-	const getName = () => title;
+
+	const name = title;
+
 	let list = [];
 	let id = 0;
 
 	return {
-		getName,
+		name,
 		list,
 		id
 	}
