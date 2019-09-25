@@ -20,19 +20,28 @@
 				<div id="projectContent"></div>
 			</div>
 			<div class="todoContainer">
-				<p class="headline">Todos</p>
+				<div class="headwrapper">
+					<p class="headline">Todos</p>
+					<p id="text">Click on todo to see details</p>
+				</div>
 				<button id="addTodo">Add New Todo</button>
 				<div id="todoModal" style="display: none">
 					<form id="todoForm" method="post">
+    					<span class="todoClose">&times;</span>
 						<div id="todoTitle"><p>Todo Title:</p><input type="text" name="todoTitle"></div>
 						<div id="todoDescription"><p>Description:</p><input type="text" name="todoDescription"></div>
 						<div id="todoDueDate"><p>Due Date:</p><input type="date" name="dueDate"></div>
 						<div id="todoPriority">
 							<p>Priority:</p>
-							<input type="radio" id="todoRegular" name="todoPriority" value="regular">
-							<label for="todoRegular">Regular</label>
-							<input type="radio" id="todoUrgent" name="todoPriority" value="urgent">
-							<label for="todoUrgent">Urgent</label>
+							<div id="regular">
+								<input type="radio" id="todoRegular" name="todoPriority" value="regular">
+								<label for="todoRegular">Regular</label>
+							</div>
+							<div id="urgent">
+								<input type="radio" id="todoUrgent" name="todoPriority" value="urgent">
+								<label for="todoUrgent">Urgent</label>
+							</div>
+							
 						</div>
 						<div id="todoSubmit"><input type="submit" name="todoSubmit" value="Submit"></div>
 					</form>	

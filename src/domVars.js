@@ -8,6 +8,7 @@ const domVars = (() => {
 	const projectContent = document.querySelector('#projectContent');
 	const todoContent = document.querySelector('#todoContent');
 	const projectClose = document.querySelector('.projectClose');
+	const todoClose = document.querySelector('.todoClose');
 
 	return {
 		addProjectButton,
@@ -18,7 +19,8 @@ const domVars = (() => {
 		todoForm,
 		projectContent,
 		todoContent,
-		projectClose
+		projectClose,
+		todoClose
 	}
 })();
 

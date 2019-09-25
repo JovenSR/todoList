@@ -12,14 +12,13 @@ const projectDom = (() => {
 	const showTodos = todoDom.showTodos;
 	const todoForm = domVars.todoForm;
 	const addTodos = todoDom.addTodos;
-	const projectClose = domVars.projectClose;
 
 
 	function defaultStart() {
 		const defaultProject = Project('Default');
 		defaultProject.list.push({'title': 'default todo', 'description': 'testing out default todo', 'date': 'Sept 23, 2089', 'priority': 'regular'});
 		let div = document.createElement('div');
-		let para = document.createElement('para');
+		let para = document.createElement('p');
 		let deleteProject = document.createElement('i');
 
 		para.innerHTML = defaultProject.name;

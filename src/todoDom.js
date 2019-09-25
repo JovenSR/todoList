@@ -8,6 +8,21 @@ const todoDom =(() => {
 	const todoForm = domVars.todoForm;
 	const todoContent = domVars.todoContent;
 
+	domVars.addTodoButton.addEventListener('click', (e) => {
+		todoModal.style.display = 'block';
+	})
+
+	domVars.todoClose.addEventListener('click', (e) => {
+		todoModal.style.display = 'none';
+	})
+
+	window.addEventListener('click', (e) => {
+		if(e.target == todoModal) {
+			todoModal.style.display = 'none';
+		}
+	})
+
+
 	function showTodos(projectList) {
 		todoContent.innerHTML = '';
 		projectList.forEach(function(item) {
@@ -73,13 +88,6 @@ const todoDom =(() => {
 		})
 	}
 
-	domVars.addTodoButton.addEventListener('click', (e) => {
-		if(todoModal.style.display === 'none') {
-			todoModal.style.display = 'grid';
-		} else {
-			todoModal.style.display = 'none';
-		}
-	})
 
 	function addTodos(project, todo) {
 		let newTodo = {'title': todo.todoTitle.value, 'description': todo.todoDescription.value, 'date': format(new Date(todo.dueDate.value + ' 00:00'), 'MMM do, yyyy'), 'priority': todo.todoPriority.value}
