@@ -69,9 +69,6 @@ h1 {
   	transform: scaleX(1);
 }
 
-/*#projectForm {
-	display: grid;
-}*/
 
 #projectModal {
 	position: fixed; /* Stay in place */
@@ -102,7 +99,6 @@ h1 {
 
 #projectsubmit {
 	justify-self: end;
-	width: 100%;
 }
 
 #projectsubmit > input {
@@ -110,7 +106,7 @@ h1 {
 	color: #444444;
 	background: #6c9387;
 	padding: 10px;
-	width: 30%;
+	width: 100%;
 }
 
 @keyframes animatetop {
@@ -131,6 +127,23 @@ h1 {
   	color: #5d8c9e;
   	text-decoration: none;
   	cursor: pointer;
+}
+
+#projectTitle {
+	display: grid;
+	grid-template-columns: 1fr 2fr;
+}
+
+#projectTitle > p {
+	align-self: center;
+}
+
+#projectTitle > input {
+	align-self: center;
+	border-top: none;
+	border-right: none;
+	border-left: none;
+	border-bottom: 1px groove #78877A;
 }
 
 
@@ -158,9 +171,99 @@ h1 {
 	transition: all 0.3s ease;
 }
 
+#todoModal {
+	position: fixed; /* Stay in place */
+	z-index: 1; /* Sit on top */
+	padding-top: 100px; /* Location of the box */
+	left: 0;
+	top: 0;
+	width: 100%; /* Full width */
+	height: 100%; /* Full height */
+	overflow: auto; /* Enable scroll if needed */
+}
+
 #todoForm {
+	position: relative;
+  	background-color: #fefefe;
+  	margin: auto;
+  	padding: 20px;
+  	border: 1px solid #efefef;
+  	border-radius: 25px;
+  	width: 25%;
+  	box-shadow: 2px 6px 25px rgba(0, 0, 0, 0.1);
+  	display: grid;
+  	grid-template-columns: 1fr;
+  	grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  	animation-name: animatetop;
+  	animation-duration: 0.4s
+}
+
+.todoClose {
+  	color: #6c9387;
+  	float: right;
+  	font-size: 28px;
+  	font-weight: bold;
+  	justify-self: end;
+}
+
+.todoClose:hover,
+.todoClose:focus {
+  	color: #5d8c9e;
+  	text-decoration: none;
+  	cursor: pointer;
+}
+
+#todoTitle,
+#todoDescription,
+#todoDueDate {
 	display: grid;
-	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+	grid-template-columns: 1fr 2fr;
+}
+
+#todoTitle > p,
+#todoDescription > p,
+#todoDueDate > p {
+	align-self: center;
+}
+
+#todoTitle > input,
+#todoDescription > input,
+#todoDueDate > input {
+	align-self: center;
+	border-top: none;
+	border-right: none;
+	border-left: none;
+	border-bottom: 1px groove #78877A;
+}
+
+#todoPriority {
+	display: grid;
+	grid-template-columns: 1fr 2fr 2fr;
+	grid-gap: 10px;
+}
+
+#todoPriority > div {
+	align-self: center;
+}
+
+#regular {
+	justify-self: center;
+}
+
+#urgent {
+	justify-self: start;
+}
+
+#todoSubmit {
+	justify-self: end;
+}
+
+#todoSubmit > input {
+	border-radius: 25px;
+	color: #444444;
+	background: #6c9387;
+	padding: 10px;
+	width: 100%;
 }
 
 .selectedProject {
@@ -219,3 +322,29 @@ h1 {
 	font-size: 30px;
 }
 
+#addProject {
+	border-radius: 25px;
+	color: #444444;
+	background: #6c9387;
+	padding: 10px;
+	width: 30%;
+}
+
+#addTodo {
+	border-radius: 25px;
+	color: #444444;
+	background: #6c9387;
+	padding: 10px;
+	width: 15%;
+}
+
+.headwrapper {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+
+#text {
+	justify-self: end;
+	align-self: center;
+	line-height: 1.2em;
+}
