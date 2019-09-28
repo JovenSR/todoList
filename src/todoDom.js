@@ -22,7 +22,6 @@ const todoDom =(() => {
 		}
 	})
 
-
 	function showTodos(projectList) {
 		todoContent.innerHTML = '';
 		projectList.forEach(function(item) {
@@ -74,8 +73,6 @@ const todoDom =(() => {
 			div.appendChild(todoDate);
 			div.appendChild(todoPriority);
 			div.appendChild(deleteTodo);
-
-			// todoContent.appendChild(div);
 			todoContent.insertBefore(div, todoContent.childNodes[0]);
 
 			div.addEventListener('click', (e) => {
@@ -87,7 +84,6 @@ const todoDom =(() => {
 			})
 		})
 	}
-
 
 	function addTodos(project, todo) {
 		let newTodo = {'title': todo.todoTitle.value, 'description': todo.todoDescription.value, 'date': format(new Date(todo.dueDate.value + ' 00:00'), 'MMM do, yyyy'), 'priority': todo.todoPriority.value}

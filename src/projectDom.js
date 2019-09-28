@@ -13,18 +13,15 @@ const projectDom = (() => {
 	const todoForm = domVars.todoForm;
 	const addTodos = todoDom.addTodos;
 
-
 	function defaultStart() {
 		const defaultProject = Project('Default');
 		defaultProject.list.push({'title': 'default todo', 'description': 'testing out default todo', 'date': 'Sept 23, 2089', 'priority': 'regular'});
 		let div = document.createElement('div');
 		let para = document.createElement('p');
 		let deleteProject = document.createElement('i');
-
 		para.innerHTML = defaultProject.name;
 		div.appendChild(para);
 		div.appendChild(deleteProject);
-
 		div.classList.add('projectDiv');
 		deleteProject.classList.add('icon-trash');
 		projectContent.appendChild(div);
@@ -44,7 +41,6 @@ const projectDom = (() => {
 		})
 		changeFlag();
 	}
-
 	defaultStart();
 	
 	function changeFlag() {
@@ -58,7 +54,6 @@ const projectDom = (() => {
 			}
 		})
 	}
-
 
 	domVars.addProjectButton.addEventListener('click', (e) => {
 		projectModal.style.display = 'block';
@@ -92,14 +87,11 @@ const projectDom = (() => {
 			let div = document.createElement('div');
 			let para = document.createElement('p');
 			let deleteProject = document.createElement('i');
-
 			div.classList.add('projectDiv');
 			deleteProject.classList.add('icon-trash');
-
 			div.appendChild(para);
 			div.appendChild(deleteProject);
 			para.innerHTML = newProject.name;
-
 			projectContent.insertBefore(div, projectContent.childNodes[0])
 			projectArray.push(newProject);
 			newProject.id = projectArray.indexOf(newProject);
@@ -138,7 +130,6 @@ const projectDom = (() => {
 			addTodos(project, e.target);
 		}
 	})
-
 })();
 
 export default projectDom
